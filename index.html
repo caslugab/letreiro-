@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Piscante</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #222;
+    }
+
+    .painel {
+      text-align: center;
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .texto {
+      font-family: Arial, sans-serif;
+      font-size: 2em;
+      color: #fff;
+      animation: piscar 1s infinite;
+    }
+
+    .texto:nth-child(2) {
+      margin-top: 10px;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes piscar {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="painel">
+    <div class="texto">Lucas</div>
+    <div class="texto">Bárbara</div>
+  </div>
+</body>
+</html>
